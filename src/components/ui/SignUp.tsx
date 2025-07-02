@@ -131,7 +131,7 @@ export const SignUp = () => {
                     setLogin(login => !login)
                 }}
                  className="z-50 text-white rounded-full border-1 border-white px-20 text-center py-4 text-lg mt-6 cursor-pointer hover:bg-white hover:opacity-90 hover:border-black hover:text-black">Sign In</div>
-                <div><img className="scale-118" src={Brain}/></div>
+                <div className="w-full flex justify-center mt-8"><img className="max-h-[300px] max-w-full object-contain" src={Brain}/></div>
             </div>
             
         : 
@@ -177,7 +177,7 @@ export const SignUp = () => {
                     setLogin(login => !login)
                  }}
                  className="z-50 text-white rounded-full border-1 border-white px-20 text-center py-4 text-lg mt-6 cursor-pointer hover:bg-white hover:opacity-90 hover:border-black hover:text-black">Sign Up</div>
-                <div><img className="" src={Signed}/></div>
+                <div className="w-full flex justify-center mt-8"><img className="max-h-[300px] max-w-full object-contain" src={Signed}/></div>
             </div>
             }
         </div>
