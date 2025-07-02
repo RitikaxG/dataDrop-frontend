@@ -36,7 +36,7 @@ export const Cards = () => {
     useEffect(()=>{
         const getContents  = async () => {
             try{
-                const response = await axios.get(`${BACKEND_URL}/api/v1/content`);
+                const response = await axios.get<{contents : Content[]}>(`${BACKEND_URL}/api/v1/content`);
                 setContent(response?.data?.contents);
             }
             catch(err){

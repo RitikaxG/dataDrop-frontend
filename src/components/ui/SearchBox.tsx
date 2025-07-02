@@ -2,6 +2,7 @@ import axios from "axios";
 import { BACKEND_URL } from "../../config";
 import { useEffect, useState } from "react";
 import { useContentContext } from "../../context/content";
+import { Content } from "./AllCards";
 
 export const SearchBox = () => {
 
@@ -16,7 +17,7 @@ export const SearchBox = () => {
 
     const searchContent  = async ( title : string ) => {
         try{
-            const response  = await axios.post(`${BACKEND_URL}/api/v1/content/search`,{
+            const response  = await axios.post<{matchedContents : Content[]}>(`${BACKEND_URL}/api/v1/content/search`,{
                 title : title
             },{
                 headers : {

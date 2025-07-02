@@ -23,7 +23,7 @@ export const SharedBrainPage = () => {
         const fetchSharedContent = async () => {
             try{
                 
-                const response = await axios.get(`${BACKEND_URL}/api/v1/brain/${hash}`);
+                const response = await axios.get<{content : Content[]}>(`${BACKEND_URL}/api/v1/brain/${hash}`);
                 console.log(response.data.content);
                 setSharedContents(response.data.content);
             }
