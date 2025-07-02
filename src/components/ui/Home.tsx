@@ -155,7 +155,7 @@ const Marquee = ({ children }: { children: React.ReactNode }) => {
   const baseX = useMotionValue(0);
   const marqueeRef = useRef<HTMLDivElement>(null);
 
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((delta) => {
     baseX.set(baseX.get() - (0.04 * delta)); // speed
   });
 
